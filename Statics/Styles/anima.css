@@ -1,0 +1,379 @@
+@font-face 
+{
+    font-family: Admirationpains;
+    src: url(../Media/Admirationpains.ttf);
+}
+
+@font-face {
+    font-family: Oakland;
+    src: url(../Media/Oakland\ Free.ttf);
+}
+
+body
+{
+    background-color: #fee9b9;
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+h1
+{
+    font-family: Oakland;
+    font-size: 40px;
+}
+
+h2
+{
+    font-family: 'Admirationpains';
+    font-size: x-large;
+}
+
+/*------------------------------------Titulos----------------------------------------*/
+header
+{
+    background-color: #008c85;
+    color: #b64d07;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 4rem;
+    padding: 0px;
+
+}
+
+.Movimiento
+{
+    position: absolute;
+    margin: 0%;
+    width: auto;
+    height: auto;
+
+    animation-name: movimiento;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+img.Ini
+{
+    position: absolute;
+    left: 25px;
+    height: 4rem;
+    width: 4rem;
+}
+
+@keyframes movimiento{
+    0%{
+        left: 0px;
+    }
+
+    100%{
+        left: 2000px;
+    }
+    
+}
+
+/*--------------------------------Barra de animaciones---------------------------------*/
+
+div.Barra
+{
+    background-color: #19fdf2;
+    height: 5rem;
+    width: 100%;
+}
+
+img.Barra
+{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    left: 25%;
+
+    animation-name: Salto;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite ;
+    animation-direction: alternate;
+}
+
+@keyframes Salto {
+    0%{
+        top: 5rem;
+    }
+    100%{
+        top: 4rem;
+    }
+    
+}
+
+img.Compre
+{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    left: 50%;
+
+    animation-name: Grande;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite ;
+    animation-direction: alternate;
+}
+
+@keyframes Grande {
+    0%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+img.Pata
+{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    left: 75%;
+
+    animation-name: Rota;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite ;
+    animation-direction: alternate;
+}
+
+@keyframes Rota {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360);
+    }
+    
+}
+
+/*---------------------------Media Telefono------------------------------------------------*/
+
+@media screen and (max-width: 1100px )
+{
+        
+    div.Product
+    {
+       
+        flex-direction:column;
+        align-content: center;
+    }
+    
+    article
+    {
+        flex-direction: column;
+        height: 20rem;
+        width: 20rem;
+    }
+    
+    article:hover
+    {
+        height: 40rem;
+        width: 20rem;
+        margin: 2rem;
+        padding: 1rem;
+    
+        /* Transiciones */
+        transition-property: heigth;
+        transition-duration: 2s;
+        transition-delay: 1s;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    
+    article:hover
+    {
+        height: 20rem;
+        width: 47.5rem;
+        margin: 2rem;
+        padding: 1rem;
+    
+        /* Transiciones */
+        transition-property: width;
+        transition-duration: 2s;
+        transition-delay: 1s;
+    }
+}
+
+
+/* Productos */
+
+/* ------------------------Productos sin Hover-------------------------------------------- */
+
+div.Product
+{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+article
+{
+    background-color: #fda619;
+    text-align: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    display: flex;
+    height: 20rem;
+    width: 20rem;
+    margin: 2rem;
+    padding: 1rem;
+    
+    /* Transiciones */
+    transition-property: width;
+    transition-duration: 2s;
+    transition-delay: 1s;
+
+    /* Bordes */
+    border-image-slice:251 234 250 253;
+    border-image-width:20px 20px 20px 20px;
+    border-image-outset:0px 0px 0px 0px;
+    border-image-repeat:round round;
+    border-image-source:url("https://cdn-icons-png.flaticon.com/512/4987/4987868.png");
+    border-style:hidden;
+}
+
+div.Previ
+{
+    height: 20rem;
+    width: 20rem;
+}
+
+div.Desc
+{
+    font-size: 0px;
+    height: 20rem;
+    width: 20rem;
+    
+    /* Transiciones */
+    transition-property:  font-size;
+    transition-duration: 1s;
+    transition-delay: .5s;
+}
+
+button
+{
+    background-color: #fdf919;
+    border-radius: 50%;
+    font-size: 0px;
+    height: 2rem;
+    width: 2rem;
+
+    /* Transiciones */
+    transition-property: font-size, width, border-radius;
+    transition-duration: 1s;
+    transition-delay: .2;
+}
+
+img.Perros
+{
+    width: 15rem;
+    height: 15rem;
+}
+
+
+/*---------------------------------Productos con Hover---------------------------------------*/
+
+article:hover
+{
+    background-color: #008c85;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+    /* Bordes */
+    border-image-slice:251 234 250 253;
+    border-image-width:20px 20px 20px 20px;
+    border-image-outset:0px 0px 0px 0px;
+    border-image-repeat:round round;
+    border-image-source:url("https://cdn-icons-png.flaticon.com/512/4987/4987868.png");
+    border-style:hidden;
+}
+
+div.Desc:hover
+{
+    font-size: larger;
+    height: 20rem;
+    width: 20rem;
+
+    /* Transiciones */
+    transition-property:  font-size;
+    transition-duration: 1s;
+    transition-delay: .5s;
+}
+
+button:hover
+{
+    background-color: #fdf919;
+    border-radius: 25%;
+    font-size: larger;
+    width: 4rem;
+
+    transition-property: font-size, width, border-radius;
+    transition-duration: 1s;
+    transition-delay: .2;
+}
+
+
+
+/*-----------------------------------Pie de Pagina---------------------------------------*/
+
+
+footer
+{
+    background-color: #008c85;
+    justify-content:space-around ;
+    align-content: center;
+    display: flex;
+}
+
+div.Marketing
+{
+    display: flex;
+    height: 6rem;
+}
+
+div.Red
+{
+    position: relative;
+    margin: 0;
+    left: 35%;
+    height: 6rem;
+    width: 50%;
+
+    animation-name: Redes;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+img.Redes
+{
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes Redes
+{
+    0%{
+        bottom: -1.75rem;
+    }
+
+    100%{
+        bottom: -.5rem;
+    }
+}
+
